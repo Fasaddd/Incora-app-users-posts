@@ -1,0 +1,17 @@
+.Component{
+    width: 30%;
+    padding: 7px;
+    box-sizing: content-box;
+    box-shadow: 0 2px 3px #ccc;
+    list-style: none;
+    border: 1px solid #ccc;
+    margin: 10px;
+    text-align: left;
+}
+.Component span{
+    display: inline-block;
+    margin: 3px 8px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #e2e6fc;
+}
