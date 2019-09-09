@@ -22,22 +22,16 @@ class Users extends Component {
         let updatedUsers = <Spinner />;
 
         if (!this.props.loading) {
-            updatedUsers = this.props.users.map(element => {
-                return <User key={element.id}
-                    userInf={element}
-                    clicked={() => this.redirectOnPost(element.id)}
-                />
-            });
-        };
-        if (this.props.error !== null) {
-            updatedUsers = <p>Some Error</p>;
-        } else {
-            updatedUsers = this.props.users.map(element => {
-                return <User key={element.id}
-                    userInf={element}
-                    click={() => this.redirectOnPost(element.id)}
-                />
-            });
+            if (this.props.error !== null) {
+                updatedUsers = <p>Some Error</p>;
+            } else {
+                updatedUsers = this.props.users.map(element => {
+                    return <User key={element.id}
+                        userInf={element}
+                        clicked={() => this.redirectOnPost(element.id)}
+                    />
+                });
+            };
         };
 
         return (
